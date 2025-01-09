@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .home-sections-style {
+    @apply flex items-center hover:cursor-pointer border-b-2 border-transparent hover:border-customPink transition-colors duration-200;
+  }
+  .service-cards{
+    @apply relative p-6 bg-black dark:bg-lightBlack shadow rounded-lg text-center overflow-hidden hover:cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform duration-300;
+  }
+}

@@ -1,14 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Delivery Home Screen</title>
-  <link rel="stylesheet" type="" href="output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodieExpress</title>
+  <link rel="shortcut icon" href="/frontend/assets/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="font-bold text-xl m-10 bg-red-400">
-    Home Screen
-  </div>
+
+<body class="text-gray-800 dark:bg-[#2a2a2a] dark:text-white transition-colors duration-200">
+  <nav class="flex items-center justify-between px-4 py-2 md:px-8 md:py-4 fixed top-0 left-0 w-full z-10 bg-white dark:bg-darkBlack shadow-lg">
+    <a href="./home_screen.html" class="flex items-center">
+      <img src="/frontend/assets/icon.png" alt="Logo" class="h-6 md:h-8 mr-2" />
+      <span class="text-lg md:text-xl font-extrabold text-pink-600">FoodieExpress</span>
+    </a>
+
+    <div class="flex items-center">
+      <!-- Theme Toggle Button -->
+      <button id="themeToggle" class="p-2 bg-gray-300 rounded-full cursor-pointer">
+        <img src="/frontend/assets/light.png" alt="Toggle Theme" class="h-5 md:h-6" />
+      </button>
+
+      <!-- Hamburger Menu -->
+      <div class="hamburger ml-4 w-8" id="hamburger-1">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+
+      <ul class="flex items-center space-x-8 ml-4">
+        <li class="p-3 border-b-2 border-transparent hover:border-pink-600 transition-all duration-500 ease-in-out">
+          <a href="#" class="font-bold">Home</a>
+        </li>
+        <li class="p-3 border-b-2 border-transparent hover:border-pink-600 transition-all duration-500 ease-in-out">
+          <a href="#services" class="font-bold">About</a>
+        </li>
+        <li class="p-3 border-b-2 border-transparent hover:border-pink-600 transition-all duration-500 ease-in-out">
+          <a href="#reviews" class="font-bold">Reviews</a>
+        </li>
+        <li class="p-3 border-b-2 border-transparent hover:border-pink-600 transition-all duration-500 ease-in-out">
+          <a href="#download" class="font-bold">Download App</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="mt-16 relative bg-cover bg-center h-[50vh] md:h-[70vh]"
+    style="background-image: url('/frontend/assets/body_background.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative text-center text-white flex flex-col items-center justify-center h-full">
+      <h1 class="text-4xl md:text-6xl font-bold">Welcome to FoodieExpress</h1>
+      <p class="mt-4 text-lg md:text-xl max-w-2xl">Delightful dishes and an experience to savor. Order now or visit us
+        for an unforgettable culinary journey!</p>
+      <a href="#menu"
+        class="mt-6 px-6 py-3 bg-pink-600 text-white rounded-lg font-semibold hover:bg-pink-700 transition">Explore
+        Menu</a>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="py-12 bg-gray-100 dark:bg-darkBlack">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-cards">
+          <!-- Background image and black overlay -->
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/dilivery.webp');"></div>
+          <div class="relative z-10">
+            <h3 class="font-semibold text-xl text-white">Fast Delivery</h3>
+            <p class="mt-2 text-gray-200">Get your food delivered fresh and fast.</p>
+          </div>
+        </div>
+        <div class="service-cards">
+          <!-- Background image and black overlay -->
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/dinein.jpg');"></div>
+          <div class="relative z-10">
+            <h3 class="font-semibold text-xl text-white">Cozy Dine-In</h3>
+            <p class="mt-2 text-gray-200">Enjoy your meal in a relaxing environment.</p>
+          </div>
+        </div>
+        <div class="service-cards">
+          <!-- Background image and black overlay -->
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/catering.webp');"></div>
+          <div class="relative z-10">
+            <h3 class="font-semibold text-xl text-white">Catering Services</h3>
+            <p class="mt-2 text-gray-200">Perfect catering for your special occasions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Menu</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg" alt="Pizza" class="h-48 w-full object-cover rounded-lg mb-4">
+          <h3 class="font-semibold text-xl">Classic Pizza</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">A timeless favorite loaded with cheese and toppings.</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg" alt="Burger" class="h-48 w-full object-cover rounded-lg mb-4">
+          <h3 class="font-semibold text-xl">Juicy Burger</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Freshly grilled burgers that hit the spot.</p>
+        </div>
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <img src="https://cdn.pixabay.com/photo/2017/08/01/01/42/pancake-2562707_1280.jpg" alt="Dessert" class="h-48 w-full object-cover rounded-lg mb-4">
+          <h3 class="font-semibold text-xl">Delicious Desserts</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Sweet treats to complete your meal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="reviews" class="py-12 bg-gray-100 dark:bg-darkBlack">
+    <div class="max-w-7xl mx-auto px-4 md:px-8">
+      <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <p class="text-gray-600 dark:text-gray-400 italic">"Amazing food and exceptional service. Highly recommend!"
+          </p>
+          <h4 class="mt-4 font-bold text-pink-600">- Jane Doe</h4>
+        </div>
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <p class="text-gray-600 dark:text-gray-400 italic">"The best pizza I've ever had. Will come back for more!"
+          </p>
+          <h4 class="mt-4 font-bold text-pink-600">- John Smith</h4>
+        </div>
+        <div class="p-6 bg-white dark:bg-lightBlack shadow rounded-lg">
+          <p class="text-gray-600 dark:text-gray-400 italic">"A wonderful experience. Great atmosphere and tasty food!"
+          </p>
+          <h4 class="mt-4 font-bold text-pink-600">- Emily Brown</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16" id="download">
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="flex flex-col lg:flex-row items-center">
+        <!-- Image Section -->
+        <div class="w-full lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+          <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/app.png" alt="App Preview" class="w-3/5">
+        </div>
+
+        <!-- Content Section -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center">
+          <h2 class="text-3xl font-bold mb-4">Download Our App</h2>
+          <p class="text-lg  mb-8">
+            Get exclusive offers, order your favorite dishes, and stay updated with the latest features—all on our
+            mobile app.
+          </p>
+          <div class="flex justify-center lg:justify-start space-x-4">
+            <!-- App Store Button -->
+            <a href="#" >
+              <img src="/frontend/assets/app-google.png" alt="Download on the App Store" class="">
+            </a>
+
+            <!-- Google Play Button -->
+            <a href="#" >
+              <img src="/frontend/assets/app-apple.png" alt="Get it on Google Play">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-darkBlack text-white py-8">
+    <div class="container mx-auto flex flex-wrap justify-between mb-8">
+      <!-- About Section -->
+      <div class="w-full md:w-1/3 mb-6 md:mb-0 px-4">
+        <h3 class="text-xl font-semibold mb-4">About</h3>
+        <p class="text-sm leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est debitis molestias sapiente alias optio porro
+          deleniti possimus consectetur. Commodi!
+        </p>
+      </div>
+
+      <div class="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        <!-- Our Menu Section -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Our Menu</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Biryani</li>
+            <li>Chicken</li>
+            <li>Pizza</li>
+            <li>Burger</li>
+            <li>Pasta</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Menu</li>
+            <li>Order</li>
+            <li>Services</li>
+          </ul>
+        </div>
+
+        <!-- Get in Touch Section -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Get in touch</h3>
+          <ul class="space-y-2 text-sm">
+            <li>Account</li>
+            <li>Support Center</li>
+            <li>Feedback</li>
+            <li>Suggestion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-gray-700 pt-4 text-center">
+      <p class="text-sm">Copyright © 2022. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Js -->
+  <script>
+    const assetsFilePath = 'frontend/assets';
+    const themeToggle = document.getElementById('themeToggle');
+    const themeImg = themeToggle.querySelector('img');
+
+    themeToggle.addEventListener('click', () => {
+      const isDarkMode = document.documentElement.classList.toggle('dark');
+      themeImg.src = isDarkMode ? `/${assetsFilePath}/dark.png` : `/${assetsFilePath}/light.png`;
+      // console.log(themeImg.src)
+    });
+  </script>
 </body>
+
 </html>
