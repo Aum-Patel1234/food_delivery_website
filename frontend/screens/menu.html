@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link rel="shortcut icon" href="/frontend/assets/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- Hero Section -->
+    <header class="relative h-64 md:h-96 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center transform scale-110 transition-transform duration-500 hover:scale-100"
+            style="background-image: url('/frontend/assets/veg_bg.webp');">
+        </div>
+
+        <!-- Overlay Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-80"></div>
+
+        <!-- Animated Floating Items -->
+        <div class="absolute -top-8 left-8 w-16 h-16 bg-green-500 rounded-full shadow-lg animate-bounce"></div>
+        <div class="absolute bottom-10 right-12 w-12 h-12 bg-yellow-400 rounded-full shadow-lg animate-spin-slow"></div>
+
+        <!-- Hero Text -->
+        <div class="relative z-10 h-full flex flex-col items-center justify-center space-y-4">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white text-center">
+                🌿 Our Vegetarian Wonderland 🌟
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 text-center px-4 md:px-0">
+                Dive into a world of vibrant flavors and wholesome delights. Freshly crafted for food lovers like you!
+            </p>
+            <a href="#menu-container"
+                class="mt-4 px-6 py-2 bg-green-500 text-white font-semibold rounded-lg shadow-lg hover:bg-green-400 transition-transform transform hover:scale-105">
+                Explore the Menu
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Menu Section -->
+    <main class="py-12 max-w-6xl mx-auto px-4 md:px-8" id="menu-container">
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script>
+        // Vegetarian Menu Data
+        const menuData = {
+            starters: [
+                {
+                    name: "Bruschetta",
+                    description: "Grilled bread topped with fresh tomatoes, garlic, and olive oil.",
+                    price: "$5.99",
+                    img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+                },
+                {
+                    name: "Caesar Salad",
+                    description: "Crisp romaine lettuce tossed in Caesar dressing with croutons.",
+                    price: "$6.99",
+                    img: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+                },
+                {
+                    name: "Stuffed Mushrooms",
+                    description: "Mushrooms filled with a savory blend of cheese and herbs.",
+                    price: "$7.99",
+                    img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
+                },
+            ],
+            mainCourses: [
+                {
+                    name: "Spaghetti Pomodoro",
+                    description: "Classic Italian pasta with fresh tomato sauce and basil.",
+                    price: "$11.99",
+                    img: "https://plus.unsplash.com/premium_photo-1726804917125-0d86aaefad09?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    name: "Vegetable Stir-Fry",
+                    description: "Fresh seasonal vegetables stir-fried in a savory sauce.",
+                    price: "$12.99",
+                    img: "https://plus.unsplash.com/premium_photo-1666318300292-41ae5a1e24b9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    name: "Vegetarian Thai Green Curry",
+                    description: "Creamy coconut-based curry with fresh vegetables and fragrant Thai spices.",
+                    price: "$14.99",
+                    img: "https://plus.unsplash.com/premium_photo-1726783359110-de1b5d04179c?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+            ],
+            desserts: [
+                {
+                    name: "Chocolate Lava Cake",
+                    description: "Warm chocolate cake with a gooey molten chocolate center.",
+                    price: "$6.99",
+                    img: "https://plus.unsplash.com/premium_photo-1723867522131-af9733323bc1?q=80&w=2009&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    name: "Tiramisu",
+                    description: "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+                    price: "$7.99",
+                    img: "https://images.unsplash.com/photo-1732869931523-8fd0437da0f1?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+                {
+                    name: "Mango Mousse",
+                    description: "Light and airy mango-flavored mousse served with fresh fruit topping.",
+                    price: "$5.99",
+                    img: "https://images.unsplash.com/photo-1518091270798-06f27624a89e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                },
+            ],
+        };
+
+        const renderMenu = () => {
+            const menuContainer = document.getElementById("menu-container");
+
+            for (const [category, items] of Object.entries(menuData)) {
+                const section = document.createElement("section");
+                section.classList.add("mb-12");
+
+                // Add category title
+                const title = document.createElement("h2");
+                title.classList.add("text-3xl", "font-bold", "mb-6", "text-center", "text-green-600", "dark:text-green-400");
+                title.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+                section.appendChild(title);
+
+                // Create grid for items
+                const grid = document.createElement("div");
+                grid.classList.add("grid", "grid-cols-1", "md:grid-cols-3", "gap-8");
+
+                // Add items to grid
+                items.forEach(item => {
+                    const itemCard = document.createElement("div");
+                    itemCard.classList.add(
+                        "p-6",
+                        "bg-gradient-to-r",
+                        "from-green-100",
+                        "to-green-50",
+                        "dark:from-gray-700",
+                        "dark:to-gray-800",
+                        "shadow-lg",
+                        "rounded-lg",
+                        "transform",
+                        "transition",
+                        "duration-300",
+                        "hover:scale-105",
+                        "hover:shadow-2xl"
+                    );
+
+                    const img = document.createElement("img");
+                    img.src = item.img;
+                    img.alt = item.name;
+                    img.classList.add(
+                        "w-full",
+                        "h-40",
+                        "object-cover",
+                        "rounded-md",
+                        "mb-4",
+                        "shadow-md"
+                    );
+                    itemCard.appendChild(img);
+
+                    const name = document.createElement("h3");
+                    name.classList.add("text-xl", "font-semibold", "text-green-600", "dark:text-green-400");
+                    name.textContent = item.name;
+                    itemCard.appendChild(name);
+
+                    const description = document.createElement("p");
+                    description.classList.add("text-sm", "mt-2", "text-gray-700", "dark:text-gray-300");
+                    description.textContent = item.description;
+                    itemCard.appendChild(description);
+
+                    const price = document.createElement("p");
+                    price.classList.add("mt-4", "font-bold", "text-lg", "text-gray-800", "dark:text-gray-100");
+                    price.textContent = item.price;
+                    itemCard.appendChild(price);
+
+                    // Add Order Now Button
+                    const button = document.createElement("button");
+                    button.classList.add(
+                        "mt-4",
+                        "px-4",
+                        "py-2",
+                        "bg-green-500",
+                        "text-white",
+                        "rounded-lg",
+                        "shadow-md",
+                        "hover:bg-green-400",
+                        "transition",
+                        "duration-300"
+                    );
+                    button.textContent = "Order Now";
+                    itemCard.appendChild(button);
+
+                    grid.appendChild(itemCard);
+                });
+
+                section.appendChild(grid);
+                menuContainer.appendChild(section);
+            }
+        };
+
+        renderMenu();
+    </script>
+</body>
+
+</html>

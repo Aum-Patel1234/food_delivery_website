@@ -11,6 +11,9 @@ module.exports = {
         darkBlack: '#222222',
         lightBlack: '#3a3a3a'
       },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
     },
   },
   plugins: [],
