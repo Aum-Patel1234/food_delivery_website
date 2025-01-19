@@ -2,10 +2,13 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 const server = http.createServer((req, res) => {
+  const baseDir = path.join(__dirname,'static')
   const filePath =
-    req.url === "/"
-      ? "frontend/screens/home_screen.html"
-      : `frontend/screens/${req.url}`;
+  req.url === "/"
+    ? path.join(baseDir, "screens/home_screen.html") 
+    : path.join(baseDir, req.url);
+  console.log(baseDir,'\n',filePath);
+  
   const extname = path.extname(filePath);
 
   let contentType = "text/html";

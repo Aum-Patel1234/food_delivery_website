@@ -5,21 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FoodieExpress</title>
-  <link rel="stylesheet" href="output.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="screens/output.css" />
+  <link rel="stylesheet" href="screens/style.css" />
 </head>
 
 <body class="text-gray-800 dark:bg-[#2a2a2a] dark:text-white transition-colors duration-200">
   <nav class="flex items-center justify-between px-4 py-2 md:px-8 md:py-4 fixed top-0 left-0 w-full z-10 bg-white dark:bg-darkBlack shadow-lg">
     <a href="./home_screen.html" class="flex items-center">
-      <img src="/frontend/assets/icon.png" alt="Logo" class="h-6 md:h-8 mr-2" />
+      <img src="assets/icon.png" alt="Logo" class="h-6 md:h-8 mr-2" />
       <span class="text-lg md:text-xl font-extrabold text-pink-600">FoodieExpress</span>
     </a>
 
     <div class="flex items-center">
       <!-- Theme Toggle Button -->
       <button id="themeToggle" class="p-2 bg-gray-300 rounded-full cursor-pointer">
-        <img src="/frontend/assets/light.png" alt="Toggle Theme" class="h-5 md:h-6" />
+        <img src="assets/light.png" alt="Toggle Theme" class="h-5 md:h-6" />
       </button>
 
       <!-- Hamburger Menu -->
@@ -49,7 +49,7 @@
 
   <!-- Hero Section -->
   <header class="mt-16 relative bg-cover bg-center h-[50vh] md:h-[70vh]"
-    style="background-image: url('/frontend/assets/body_background.jpg');">
+    style="background-image: url('assets/body_background.jpg');">
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div class="relative text-center text-white flex flex-col items-center justify-center h-full">
       <h1 class="text-4xl md:text-6xl font-bold">Welcome to FoodieExpress</h1>
@@ -68,7 +68,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="service-cards">
           <!-- Background image and black overlay -->
-          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/dilivery.webp');"></div>
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('assets/dilivery.webp');"></div>
           <div class="relative z-10">
             <h3 class="font-semibold text-xl text-white">Fast Delivery</h3>
             <p class="mt-2 text-gray-200">Get your food delivered fresh and fast.</p>
@@ -76,7 +76,7 @@
         </div>
         <div class="service-cards">
           <!-- Background image and black overlay -->
-          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/dinein.jpg');"></div>
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('assets/dinein.jpg');"></div>
           <div class="relative z-10">
             <h3 class="font-semibold text-xl text-white">Cozy Dine-In</h3>
             <p class="mt-2 text-gray-200">Enjoy your meal in a relaxing environment.</p>
@@ -84,7 +84,7 @@
         </div>
         <div class="service-cards">
           <!-- Background image and black overlay -->
-          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/frontend/assets/catering.webp');"></div>
+          <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('assets/catering.webp');"></div>
           <div class="relative z-10">
             <h3 class="font-semibold text-xl text-white">Catering Services</h3>
             <p class="mt-2 text-gray-200">Perfect catering for your special occasions.</p>
@@ -161,12 +161,12 @@
           <div class="flex justify-center lg:justify-start space-x-4">
             <!-- App Store Button -->
             <a href="#" >
-              <img src="/frontend/assets/app-google.png" alt="Download on the App Store" class="">
+              <img src="assets/app-google.png" alt="Download on the App Store" class="">
             </a>
 
             <!-- Google Play Button -->
             <a href="#" >
-              <img src="/frontend/assets/app-apple.png" alt="Get it on Google Play">
+              <img src="assets/app-apple.png" alt="Get it on Google Play">
             </a>
           </div>
         </div>
@@ -232,7 +232,7 @@
 
   <!-- Js -->
   <script>
-    const assetsFilePath = 'frontend/assets';
+    const assetsFilePath = 'assets';
     const themeToggle = document.getElementById('themeToggle');
     const themeImg = themeToggle.querySelector('img');
 
